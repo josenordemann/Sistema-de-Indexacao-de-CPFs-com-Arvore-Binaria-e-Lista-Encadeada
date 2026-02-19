@@ -7,15 +7,7 @@ int main()
     Lista *li = cria_lista();
     ArvBin *Arv = cria_ArvBin();
     int i;
-
-    //Exercicio pede que, ao pressionar 1, executemos o código e, ao pressionar 2, rodemos "system cat"
-    while(1)
-    {
     scanf("%d", &i);
-    switch(i)
-    {
-    case(1):
-    {
 
     // Leitura da base de dados
     FILE *f;
@@ -98,12 +90,15 @@ int main()
 
     libera_lista(li); //free
     libera_ArvBin(Arv); //free
-    break;
-    }
-    
-    //Fim do case 1
 
-     //Exercicio pede que, ao pressionar 1, executemos o código e, ao pressionar 2, rodemos "system cat"
+    
+    switch(i)
+
+    {
+    case(1):
+    { 
+     return 0;
+    }
 
     case(2):
     {
@@ -111,10 +106,7 @@ int main()
         system("cat dados2.txt");
 
         return 0;
-        //fim do programa
-    }
-
-    //fim do case 2
     }
     }
+    
 }
