@@ -38,11 +38,15 @@ A lógica de integração funciona da seguinte maneira:
 
 ## ⚙️ Funcionalidades do Menu
 
-O programa opera em dois estágios obrigatórios:
-1.  **Processamento:** Lê o CSV, constrói as estruturas em memória e gera os arquivos de saída:
-    * `dados1.txt`: Relatório baseado na Lista.
-    * `dados2.txt`: Relatório ordenado por CPF (baseado na Árvore).
-2.  **Exibição:** Exibe no terminal o conteúdo dos arquivos gerados utilizando comandos do sistema (`cat` ou `type`).
+O programa apresenta no console métricas da árvore (total de nós, altura, e os dados do primeiro e último elementos na ordem). 
+
+Através do menu de entrada, o programa opera em dois modos:
+1.  **Modo 1:** Executa a leitura, constrói as estruturas em memória e gera silenciosamente os arquivos de saída.
+2.  **Modo 2:** Executa todo o processo do Modo 1 e, ao final, utiliza o comando `system("cat...")` para exibir automaticamente no terminal o conteúdo dos três arquivos gerados.
+
+**Arquivos Gerados:**
+* `dados1.txt`: Conteúdo completo da LDE (inserções no início).
+* `dados2.txt`: CPFs da árvore impressos no percurso **Em Ordem**.
 
 ## 🚀 Como Compilar e Executar
 
@@ -53,3 +57,10 @@ Abra o terminal na raiz do projeto e execute:
 
 ```bash
 gcc main.c ArvoreBinaria.c LDED.c -o programa
+```
+
+### 2. Execução
+
+```bash
+./programa
+```
